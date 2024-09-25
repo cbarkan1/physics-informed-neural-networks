@@ -1,6 +1,9 @@
 ## Using neural networks to solve high-dimensional partial differential equations (PDEs)
 
-This repository contains code to solve the heat equation in high-dimensions using physics-informed neural networks (PINNs). Directories contain code for the heat equation in 1, 2, 4, 6, and 10 spatial dimensions.
+This repository contains code to solve the heat equation in high-dimensions using physics-informed neural networks (PINNs).
+
+* Directories contain code for the heat equation in 1, 2, 4, 6, and 10 spatial dimensions.
+* Each directory contains a jupyter notebook that summarizes the PINN's accuracy.
 
 The heat equation is:
 
