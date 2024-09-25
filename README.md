@@ -4,17 +4,17 @@ This repository contains code to solve the heat equation in high-dimensions usin
 
 The heat equation is:
 
-$$\frac{d}{dt}u(\vec{x}) = \alpha\sum_{i=1}^d \frac{d}{dx_i}u(\vec x)$$
+$$\frac{d}{dt}u(\vec{x}) = \alpha\sum_{i=1}^N \frac{d^2}{dx_i^2}u(\vec x)$$
 
-for $\vec x\in [0,1]^d$, i.e. a $d$-dimensional cube. Suppose $u(\vec x)=0$ on the boundaries, in other words,
+for $\vec x\in [0,1]^N$, i.e. a $N$-dimensional cube. Boundary conditions are $u(\vec x)=0$ on the boundaries, in other words,
 
-$$u(0,x_2,...,x_d)=u(x_1,0,...,x_d)=...=u(x_1,...,x_{d-1},0)=0$$
+$$u(0,x_2,...,x_N)=u(x_1,0,...,x_N)=...=u(x_1,...,x_{N-1},0)=0$$
 
 Initial conditions are chosen such that the exact solution is known, so that the PINN's accuracy can be evaluated.
 
 The solution $u(\vec x)$ is approximated by a neural network of the form $b(\vec x)g_\theta(\vec x)$, where $g_\theta(\vec x)$ is a multilayer perceptron with parameters $\theta$, and $b(\vec x)$ is a function which enforces the boundary condition. I use
 
-$$b(\vec x)=\Pi_{i=1}^d4x_i(1-x_i)$$
+$$b(\vec x)=\Pi_{i=1}^N4x_i(1-x_i)$$
 
 which equals 0 on the boundaries of the cube and 1 at the center of the cube.
 
