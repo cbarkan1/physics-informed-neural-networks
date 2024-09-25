@@ -11,7 +11,7 @@ $$\frac{d}{dt}u(\vec{x}) = \alpha\sum_{i=1}^N \frac{d^2}{dx_i^2}u(\vec x)$$
 
 for $\vec x\in [0,1]^N$, i.e. a $N$-dimensional cube. Boundary conditions are $u(\vec x)=0$ on the boundaries, in other words,
 
-$$u(0,x_2,...,x_N)=u(x_1,0,...,x_N)=...=u(x_1,...,x_{N-1},0)=0$$
+$$u(0,x_2,...,x_N,t)=u(x_1,0,...,x_N,t)=...=u(x_1,...,x_{N-1},0,t)=0$$
 
 Initial conditions are chosen such that the exact solution is known, so that the PINN's accuracy can be evaluated.
 
@@ -25,4 +25,4 @@ which equals 0 on the boundaries of the cube and 1 at the center of the cube.
 
 Note: In principle, one could approximate $u(\vec x)$ directly with a multilayer perceptron, and enforce the boundary conditions with a loss term during training. However, my experience has been that enforcing the boundary condition with the function $b(\vec x)$ works much better.
 
-Credit: inspiration for this repo came from Hu, Shukla, Karniadakis, and Kawaguchi (2024) Neural Networks: [link to paper](https://www.sciencedirect.com/science/article/pii/S0893608024002934)
+Credit: Inspiration for this repo came from Hu, Shukla, Karniadakis, and Kawaguchi (2024) Neural Networks: [link to paper](https://www.sciencedirect.com/science/article/pii/S0893608024002934)
