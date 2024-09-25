@@ -1,0 +1,20 @@
+## Using neural networks to solve high-dimensional partial differential equations (PDEs)
+
+This repository contains code to solve the heat equation in high-dimensions using physics-informed neural networks (PINNs). Directories contain code for the heat equation in 1, 2, 4, 6, and 10 spatial dimensions.
+
+The heat equation is:
+$$\frac{d}{dt}u(\vec x) = \alpha\sum_{i=1}^d \frac{d}{dx_i}u(\vec x)$$
+for $\vec x\in [0,1]^d$, i.e. a $d$-dimensional cube. Suppose $u(\vec x)=0$ on the boundaries, in other words,
+$$u(0,x_2,...,x_d)=u(x_1,0,...,x_d)=...=u(x_1,...,x_{d-1},0)=0$$
+
+Initial conditions are chosen such that the exact solution is known, so that the PINN's accuracy can be evaluated.
+
+The solution $u(\vec x)$ is approximated by a neural network of the form $b(\vec x)g_\theta(\vec x)$, where $g_\theta(\vec x)$ is a multilayer perceptron with parameters $\theta$, and $b(\vec x)$ is a function which enforces the boundary condition. I use
+$$b(\vec x)=\Pi_{i=1}^d4x_i(1-x_i)$$
+which equals 0 on the boundaries of the cube and 1 at the center of the cube.
+
+
+
+Note: In principle, one could approximate $u(\vec x)$ directly with a multilayer perceptron, and enforce the boundary conditions with a loss term during training. However, my experience has been that enforcing the boundary condition with the function $b(\vec x)$ works much better.
+
+Inspiration for this repo came from Hu, Shukla, Karniadakis, and Kawaguchi (2024) Neural Networks: [link to paper](https://www.sciencedirect.com/science/article/pii/S0893608024002934)
