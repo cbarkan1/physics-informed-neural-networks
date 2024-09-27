@@ -4,6 +4,7 @@ This repository contains code to solve the heat equation in high-dimensions usin
 
 * Directories contain code for the heat equation in 1, 2, 4, 6, and 10 spatial dimensions.
 * Each directory contains a jupyter notebook (Evaluating_PINN.ipynb) that summarizes the PINN's accuracy.
+* Notes on computing model derivatives using PyTorch's autograd.grad function are given in 'Notes on PyTorch's grad_outputs.ipynb'
 
 The heat equation is:
 
