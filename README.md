@@ -12,7 +12,7 @@ $$\frac{\partial}{\partial t} u(\vec{x},t) = \alpha \sum_{i=1}^N \frac{\partial^
 
 for
 
-$$vec{x} \in [0,1]^N$$, 
+$$\vec{x} \in [0,1]^N$$
 
 Boundary conditions are
 
