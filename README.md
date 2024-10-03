@@ -4,13 +4,13 @@ This repository contains code to solve the heat equation in high-dimensions usin
 
 * Directories contain code for the heat equation in 1, 2, 4, 6, and 10 spatial dimensions.
 * Each directory contains a jupyter notebook (Evaluating_PINN.ipynb) that summarizes the PINN's accuracy.
-* Notes on computing model derivatives using PyTorch's autograd.grad function are given in 'Notes on PyTorch's grad_outputs.ipynb'
+* Notes on computing model derivatives using PyTorch's autograd.grad function are given in "Notes on PyTorch's grad_outputs.ipynb"
 
 The heat equation is:
 
-$$\frac{\partial}{\partial t}u(\vec{x},t) = \alpha\sum_{i=1}^N \frac{\partial^2}{\partial x_i^2}u(\vec x,t)$$
+$$\begin{equation}\frac{\partial}{\partial t}u(\vec{x},t) = \alpha\sum_{i=1}^N \frac{\partial^2}{\partial x_i^2} u(\vec x,t)\end{equation}$$
 
-for $\vec x\in [0,1]^N$, i.e. a $N$-dimensional cube. Boundary conditions are $u(\vec x,t)=0$ on the boundaries, in other words,
+for $\vec x \in [0,1]^N$, i.e. an $N$-dimensional cube. Boundary conditions are $u(\vec x,t)=0$ on the boundaries, in other words,
 
 $$u(0,x_2,...,x_N,t)=u(x_1,0,...,x_N,t)=...=u(x_1,...,x_{N-1},0,t)=0$$
 
