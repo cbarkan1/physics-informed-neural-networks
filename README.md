@@ -7,12 +7,13 @@ This repository contains code to solve the heat equation in high-dimensions usin
 * Notes on computing model derivatives using PyTorch's autograd.grad function are given in "Notes on PyTorch's grad_outputs.ipynb"
 
 The heat equation is:
-
-$$\frac{d}{d t}u(\vec{x},t) = \alpha\sum_{i=1}^N \frac{d^2}{d x_i^2} u(\vec x,t)$$
+$$
+\frac{d}{d t} u(\vec{x},t) = \alpha \sum_{i=1}^N \frac{d^2}{d x_i^2} u(\vec{x},t)
+$$
 
 for $\vec{x} \in [0,1]^N$, i.e. an $N$-dimensional cube. Boundary conditions are $u(\vec x,t)=0$ on the boundaries, in other words,
 
-$$u(0,x_2,...,x_N,t)=u(x_1,0,...,x_N,t)=...=u(x_1,...,x_{N-1},0,t)=0$$
+$u(0,x_2,\cdots,x_N,t)=u(x_1,0,\cdots,x_N,t)=...=u(x_1,\cdots,x_{N-1},0,t)=0$
 
 Initial conditions are chosen such that the exact solution is known, so that the PINN's accuracy can be evaluated.
 
