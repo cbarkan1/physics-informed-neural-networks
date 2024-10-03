@@ -8,7 +8,7 @@ This repository contains code to solve the heat equation in high-dimensions usin
 
 The heat equation is:
 
-$$\frac{d}{dt}u(\vec{x},t) = \alpha\sum_{i=1}^N \frac{d^2}{dx_i^2}u(\vec x,t)$$
+$$\frac{\partial}{\partial t}u(\vec{x},t) = \alpha\sum_{i=1}^N \frac{\partial^2}{\partial x_i^2}u(\vec x,t)$$
 
 for $\vec x\in [0,1]^N$, i.e. a $N$-dimensional cube. Boundary conditions are $u(\vec x,t)=0$ on the boundaries, in other words,
 
