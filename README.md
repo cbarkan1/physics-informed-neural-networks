@@ -10,13 +10,13 @@ The heat equation is:
 
 $$\frac{\partial}{\partial t} u(\vec{x},t) = \alpha \sum_{i=1}^N \frac{\partial^2}{\partial x_i^2} u(\vec{x},t)$$
 
-for
+The domain considered here is
 
 $$\vec{x} \in [0,1]^N$$
 
-Boundary conditions are
+with boundary conditions
 
-$$u(0,x_2,\cdots,x_N,t)=u(x_1,0,\cdots,x_N,t)=\cdots=u(x_1,\cdots,x_{N-1},0,t)=0$$
+$$u(0,x_2,\cdots,x_N,t)=u(1,x_2,\cdots,x_N,t)=\cdots=u(x_1,\cdots,0,t)=u(x_1,\cdots,1,t)=0$$
 
 Initial conditions are chosen such that the exact solution is known, so that the PINN's accuracy can be evaluated.
 
