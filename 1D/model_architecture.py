@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-pi = 3.14159265359
+from math import pi
 
 class PINN(nn.Module):
     def __init__(self):
@@ -20,5 +20,5 @@ class PINN(nn.Module):
         # Concatenate x and t
         inputs = torch.cat([x, t], dim=1)
 
-        #sin(x) factor forces model to obey BC
+        # Boundary function 4*x*(1-x) forces model to obey BC
         return 4*x*(1-x) * self.net(inputs)

@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-pi = 3.14159265359
+from math import pi
 
 class PINN(nn.Module):
     def __init__(self):

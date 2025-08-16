@@ -2,7 +2,6 @@ import numpy as np
 import torch
 import torch.optim as optim
 from model_architecture import PINN
-import matplotlib.pyplot as plt
 
 
 def initial_condition(x):
