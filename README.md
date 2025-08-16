@@ -14,16 +14,19 @@ Each dimension folder (1D, 2D, 4D, 6D, 10D) contains:
 
 $$\frac{\partial}{\partial t} u(\vec{x},t) = \alpha \sum_{i=1}^N \frac{\partial^2}{\partial x_i^2} u(\vec{x},t)$$
 
-**Domain**: $\vec{x} \in [0,1]^N$ (N-dimensional unit cube)
+**Domain**: x ∈ [0,1]^N (N-dimensional unit cube)
 
 **Boundary conditions**: Zero Dirichlet conditions on all boundaries:
-$$u(0,x_2,\cdots,x_N,t)=u(1,x_2,\cdots,x_N,t)=\cdots=u(x_1,\cdots,0,t)=u(x_1,\cdots,1,t)=0$$
+```math
+u(0,x₂,...,x_N,t) = u(1,x₂,...,x_N,t) = ... = u(x₁,...,0,t) = u(x₁,...,1,t) = 0
+```
 
 **Initial conditions**: A few different initial conditions are used, all of which yield fairly simple exact analytical solutions.
 
 ### Neural Network Architecture
 
 The solution is approximated using:
+
 $$u(\vec{x},t) = b(\vec{x}) \cdot g_\theta(\vec{x},t)$$
 
 where:
