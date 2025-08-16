@@ -29,11 +29,13 @@ The solution is approximated using:
 
 $$u(\vec{x},t) = b(\vec{x}) \cdot g_\theta(\vec{x},t)$$
 
-where:
-- $g_\theta$ is a multilayer perceptron with parameters $\theta$
-- $b(\vec{x}) = \prod_{i=1}^N 4x_i(1-x_i\) $ enforces boundary conditions
+where $g_\theta$ is a multilayer perceptron with parameters $\theta$ and
 
-The boundary function $b(\vec{x})$ equals 0 on cube boundaries and 1 at the center, automatically satisfying boundary conditions without additional loss terms.
+$$b(\vec{x}) = \prod_{i=1}^N 4x_i(1-x_i \) $$
+
+enforces the boundary conditions.
+
+The boundary function $ b(\vec{x}) $ equals 0 on cube boundaries and 1 at the center, automatically satisfying boundary conditions without additional loss terms.
 
 ## Dependencies
 
