@@ -8,13 +8,6 @@ Each dimension folder (1D, 2D, 4D, 6D, 10D) contains:
 - `Evaluating_PINN.ipynb`, A notebook comparing the trained PINN to the exact analytical solution
 - Scripts for PINN architecture, training, and trained weights.
 
-## Dependencies
-
-- PyTorch
-- NumPy
-- Matplotlib
-- Jupyter Notebook
-
 ## Mathematical Formulation
 
 ### Heat Equation
@@ -38,6 +31,13 @@ where:
 - $b(\vec{x}) = \prod_{i=1}^N 4x_i(1-x_i)$ enforces boundary conditions
 
 The boundary function $b(\vec{x})$ equals 0 on cube boundaries and 1 at the center, automatically satisfying boundary conditions without additional loss terms.
+
+## Dependencies
+
+- PyTorch
+- NumPy
+- Matplotlib
+- Jupyter Notebook
 
 ## References
 
