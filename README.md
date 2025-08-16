@@ -8,6 +8,8 @@ Each dimension folder (1D, 2D, 4D, 6D, 10D) contains:
 - `Evaluating_PINN.ipynb`, A notebook comparing the trained PINN to the exact analytical solution
 - Scripts for PINN architecture, training, and trained weights.
 
+`Notes on PyTorch's grad_outputs.ipynb` contains notes on an aspect of computing partial derivatives in PyTorch that is not clearly specified in PyTorch's documentation.
+
 ## Mathematical Formulation
 
 ### Heat Equation
@@ -27,7 +29,7 @@ u(0,x₂,...,x_N,t) = u(1,x₂,...,x_N,t) = ... = u(x₁,...,0,t) = u(x₁,...,1
 
 The solution is approximated using:
 
-$$u(\vec{x},t) = b(\vec{x}) \cdot g_\theta(\vec{x},t)$$
+$$u(\vec{x},t) = b(\vec{x})  g_\theta(\vec{x},t)$$
 
 where $g_\theta$ is a multilayer perceptron with parameters $\theta$ and
 
@@ -35,7 +37,7 @@ $$b(\vec{x}) = \prod_{i=1}^N 4x_i(1-x_i \) $$
 
 enforces the boundary conditions.
 
-The boundary function $ b(\vec{x}) $ equals 0 on cube boundaries and 1 at the center, automatically satisfying boundary conditions without additional loss terms.
+The boundary function b(x) equals 0 on cube boundaries and 1 at the center, automatically satisfying boundary conditions without additional loss terms.
 
 ## Dependencies
 
